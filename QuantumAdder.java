@@ -11,6 +11,7 @@ public class QuantumAdder {
 
     public static void main(String[] args) {
         // Qubits: a (0), b (1), sum (2), carry (3)
+        // Four Qubits
         Program p = new Program(4);
 
         // Step 1: Set Qubits a = 1, b = 1
