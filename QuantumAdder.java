@@ -1,3 +1,8 @@
+/*
+q0 (a) and q1 (b) are initialized to 1 using X gates.
+Two CNOT gates compute the XOR (sum = a ⊕ b) into q2.
+A Toffoli gate computes the AND (carry = a AND b) into q3.
+ */
 import org.redfx.strange.*;
 import org.redfx.strange.gate.*;
 import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
