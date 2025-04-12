@@ -19,6 +19,8 @@ public class QuantumAdder {
         p.addStep(init);
 
         // Step 2: sum = a XOR b (part 1)
+        // CNOT = Controlled NOT, Control qubit: The qubit that “decides” whether to activate the gate.
+        // Target qubit: The qubit that gets flipped (NOT operation) if the control qubit is 1
         Step xor1 = new Step();
         xor1.addGate(new Cnot(0, 2)); // a ⊕ sum
         p.addStep(xor1);
@@ -29,6 +31,8 @@ public class QuantumAdder {
         p.addStep(xor2);
 
         // Step 4: carry = a AND b (Toffoli)
+        // Toffoli Gate also known as the CCNOT gate (Controlled-Controlled-NOT)
+        // The Toffoli gate flips (applies a NOT/X gate to) the target qubit only if both control qubits are 1.
         Step carry = new Step();
         carry.addGate(new Toffoli(0, 1, 3));
         p.addStep(carry);
